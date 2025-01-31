@@ -1,0 +1,25 @@
+BACKUP ~icewind_sound_sets/backup~
+SUPPORT ~eyre -- https://github.com/eyre-j/icewind_sound_sets/issues~
+VERSION ~1.0~
+README ~icewind_sound_sets/readme.txt~
+LANGUAGE ~English~
+         ~english~
+         ~icewind_sound_sets/tra/english/setup.tra~
+         ~icewind_sound_sets/tra/english/subtitles.tra~
+
+//////////////////////////////////////////////////////////////////////////////
+// Player character sounds from Icewind Dale/Icewind Dale II
+//////////////////////////////////////////////////////////////////////////////
+BEGIN @0
+DESIGNATED 0
+REQUIRE_PREDICATE ENGINE_IS ~bg1 totsc soa tob~ @10
+  INCLUDE ~icewind_sound_sets/lib/0_sound_set_files.tpa~
+
+//////////////////////////////////////////////////////////////////////////////
+// Subtitles for Icewind Dale/Icewind Dale II sound sets
+//////////////////////////////////////////////////////////////////////////////
+BEGIN @1
+DESIGNATED 1
+REQUIRE_PREDICATE ENGINE_IS ~tob~ @10
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~icewind_sound_sets.tp2~ 0 @11
+  INCLUDE ~icewind_sound_sets/lib/1_sound_set_subtitles.tpa~

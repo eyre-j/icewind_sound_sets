@@ -1,0 +1,72 @@
+// Install TobEx if not present
+INCLUDE ~icewind_sound_sets/lib/tobex.tpa~
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY soundset_names_to_tra_refs
+BEGIN
+  ID1FFI1 => 1000
+  ID1FFI2 => 1100
+  ID1FFI3 => 1200
+  ID1FFI4 => 1300
+  ID1FFI5 => 1400
+  ID1FRO1 => 1500
+  ID1FRO2 => 1600
+  ID1FWI1 => 1700
+  ID1FWI2 => 1800
+  ID1FWI3 => 1900
+  ID1FWI4 => 2000
+  ID1FWI5 => 2100
+  ID1HWF1 => 2200
+  ID1HWF2 => 2300
+  ID1HWF3 => 2400
+  ID1HWM1 => 2500
+  ID1HWM2 => 2600
+  ID1HWM3 => 2700
+  ID1MFI1 => 2800
+  ID1MFI2 => 2900
+  ID1MFI3 => 3000
+  ID1MFI4 => 3100
+  ID1MFI5 => 3200
+  ID1MRO1 => 3300
+  ID1MRO2 => 3400
+  ID1MWI1 => 3500
+  ID1MWI2 => 3600
+  ID1MWI3 => 3700
+  ID1MWI4 => 3800
+  ID1MWI5 => 3900
+  ID2FBBN => 4000
+  ID2FBRD => 4100
+  ID2FDRW => 4200
+  ID2FMNK => 4300
+  ID2FORC => 4400
+  ID2FSOR => 4500
+  ID2MBBN => 4600
+  ID2MBRD => 4700
+  ID2MDRW => 4800
+  ID2MMNK => 4900
+  ID2MORC => 5000
+  ID2MSOR => 5100
+END
+
+OUTER_SET row_count = 73
+
+ACTION_PHP_EACH soundset_names_to_tra_refs AS name => tra_ref_begin
+BEGIN
+  OUTER_SPRINT soundset_col ~$ $ %name% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *~
+  APPEND_COL csound.2da ~%soundset_col%~
+
+  COPY_EXISTING csound.2da override
+    COUNT_2DA_COLS num_cols
+    SET curr_col = num_cols - 1
+
+    FOR (i=tra_ref_begin; i<tra_ref_begin + row_count; ++i)
+    BEGIN
+      // Write strref into 2da
+      SPRINT entry (AT i)
+      PATCH_IF NOT (~%entry%~ STR_EQ ~~)
+      BEGIN
+        SET_2DA_ENTRY (i - tra_ref_begin) curr_col num_cols ___temp_strref___
+        REPLACE ___temp_strref___ (AT i)
+      END
+    END
+    PRETTY_PRINT_2DA
+END

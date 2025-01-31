@@ -1,0 +1,5 @@
+ACTION_IF ENGINE_IS ~tob~ BEGIN
+  OUTER_SPRINT TOBEX_MOD_DIRECTORY ~icewind_sound_sets~
+  LOAD_TRA ~icewind_sound_sets/tobex_redist/tobex.tra~
+  INCLUDE ~icewind_sound_sets/tobex_redist/tobex.tpa~
+END

@@ -1,0 +1,8 @@
+// All supported games get the Baldur's Gate sounds
+COPY ~icewind_sound_sets/sounds/bg~ sounds
+
+// Only BG2 engine games get the Baldur's Gate II sounds
+ACTION_IF ENGINE_IS ~soa tob~
+BEGIN
+  COPY ~icewind_sound_sets/sounds/bg2~ sounds
+END
