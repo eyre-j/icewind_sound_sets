@@ -119,12 +119,12 @@ VERSION HISTORY
 ==============================================================================
 LICENSE
 ==============================================================================
-This mod is CC BY-NC-SA v4.0, excepting any code that was borrowed from other
-sources.  See https://creativecommons.org/licenses/by-nc-sa/4.0/ to view the
-specific license terms.
+This mod is licensed CC BY-NC-SA v4.0, excepting any code that was borrowed
+from other sources.  See https://creativecommons.org/licenses/by-nc-sa/4.0/ to
+view the specific license terms.
 
-I hereby give permission for others to host and/or distribute this mod without
-restriction.
+I hereby grant permission for others to host and/or distribute this mod
+without any restrictions.
 
 NOTE: The sound assets used in this mod were taken from Icewind Dale II, and
 all rights to these resources are retained by the intellectual property
