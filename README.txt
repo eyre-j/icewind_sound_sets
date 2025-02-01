@@ -12,9 +12,9 @@ OVERVIEW
 ==============================================================================
 This modification makes forty-two player character sound sets from Icewind
 Dale and Icewind Dale II available for use in Baldur's Gate and Baldur's Gate
-II.  Optionally, subtitles for the sound sets are available for installation on
-Baldur's Gate II games with the Throne of Bhaal Expansion installed.  English
-is the only supported language.
+II.  Optionally, subtitles for the sound sets are available for installation
+on Baldur's Gate II games with the Throne of Bhaal Expansion installed.
+English is the only supported language.
 
 
 ==============================================================================
